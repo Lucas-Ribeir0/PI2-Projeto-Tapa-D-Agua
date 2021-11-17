@@ -1,0 +1,7 @@
+.header {
+    width: 100vw;
+    height: 50px;
+    background-color: lightskyblue;
+    min-height: 100%;
+    max-height: 100%;
+}

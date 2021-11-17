@@ -1,0 +1,52 @@
+.topo {
+    background-color: lightskyblue;
+    width: 100%;
+    height: 30px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.formLogin {
+    margin: 100px 33.3%;
+    padding: 0 0 30px 0;
+    border: 1px solid black;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+input {
+    padding: 5px;
+    height: 2em;
+    margin: 20px 0;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-size: 0.87em;
+    max-width: 80%;
+}
+
+input:focus {
+    border: none;
+}
+
+#login {
+    margin-right: 5px;
+}
+
+#password {
+    margin-left: 5px;
+}
+
+input:focus {
+    border: none;
+}
+
+button {
+    margin-bottom: 5px;
+    padding: 2.5px 5px;
+    font-size: 1.02em;
+    border: 1px solid black;
+    border-radius: 6px;
+}

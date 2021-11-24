@@ -1,17 +1,20 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Footer from './components/footer';
-import FormLog from './components/forms';
-import Header from './components/header';
+import Footer from './components/Footer/footer';
+import Header from './components/Header/header';
+import Rotas from './routes/routes';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-        <Header />
-        <div className="body">
-        <FormLog/>
+      <Header />
+        <div className="Body">
+          <Rotas/>
         </div>
         <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 

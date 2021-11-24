@@ -11,6 +11,7 @@ function App() {
       <Header />
         <div className="Body">
           <Rotas/>
+          <input className="teste" id="CEP" defaultValue="0"></input>
         </div>
         <Footer />
     </div>

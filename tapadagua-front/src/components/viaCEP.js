@@ -1,9 +1,10 @@
 window.onload = function() {
-    const limparFormulario = (endereco) =>{
+   const limparFormulario = (endereco) =>{
         document.getElementById('Endereço').value = '';
         document.getElementById('Bairro').value = '';
         document.getElementById('Cidade').value = '';
         document.getElementById('UF').value = '';
+        document.getElementById('CEP').vlaue = '';
     }
     
     
@@ -39,4 +40,5 @@ window.onload = function() {
     }
     
     document.getElementById('CEP').addEventListener('focusout', pesquisarCep);
-};
+
+}

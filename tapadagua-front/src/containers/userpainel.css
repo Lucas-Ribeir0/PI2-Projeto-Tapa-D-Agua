@@ -1,0 +1,17 @@
+.painel .sidebar {
+    text-align: left;
+    width: 15%;
+    border: 1.2px solid black;
+    position: fixed;
+}
+
+.sidebar h4 {
+    text-align: center;
+    margin: 5px;
+}
+
+
+.sidebar {
+    box-shadow: 0 8px 12px 5px rgba(0, 0, 0, 0.4);
+    margin: 5% 0;
+}

@@ -1,6 +1,5 @@
 import './userpainel.css'
 import {Link} from 'react-router-dom'
-import RotasLog from '../routes/routesLog'
 
 const style = {
     textDecoration: "none",
@@ -16,6 +15,8 @@ function UserPainel() {
                 <hr></hr>
                 <ul>
                     <li><Link to="/user/" style={style}>Denunciar</Link></li>
+                    <hr/>
+                    <li><Link to="/user/denuncias" style={style}>Denúncias</Link></li>
                     <hr/>
                     <li><Link to="/user/overview" style={style}>Overview</Link></li>
                     <hr/>

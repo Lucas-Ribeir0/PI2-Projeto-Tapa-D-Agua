@@ -35,8 +35,8 @@ const Registrar = () => {
                     <input type="text" class="form-control" id="celular" placeholder="Celular" required/>
                     </div>
                     <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="Telefone" placeholder="Telefone" />
+                    <label for="CPF">CPF</label>
+                    <input type="text" class="form-control" id="CPF" placeholder="CPF" />
                     </div>
                 </div>
                 <div class="form-row">

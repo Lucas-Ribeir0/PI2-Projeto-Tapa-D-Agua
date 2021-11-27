@@ -1,8 +1,9 @@
 .painel .sidebar {
     text-align: left;
     width: 15%;
-    border: 1.2px solid black;
     position: fixed;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .sidebar h4 {

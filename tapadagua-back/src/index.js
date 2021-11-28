@@ -15,7 +15,7 @@ const { O_NOATIME } = require('constants');
 
 const app = express();
 
-app.set('porta', 3306);
+app.set('porta', 3308);
 app.set('url', 'http://localhost:');
 
 app.use(express.json());

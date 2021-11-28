@@ -1,5 +1,5 @@
 div.formRegistro {
-    margin: 80px 20%;
+    margin: 80px 27%;
     box-shadow: 0px 2.75px 10px 3px rgba(15, 19, 29, 0.4);
     border-radius: 12px;
     padding-bottom: 20px;
@@ -20,4 +20,8 @@ div.formRegistro {
 
 .custom-file-label {
     background-image: none;
+}
+
+#celular {
+    margin: 0px
 }

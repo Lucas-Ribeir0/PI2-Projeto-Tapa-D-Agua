@@ -15,9 +15,9 @@ function UserPainel() {
                 <hr></hr>
                 <ul>
                     <li><Link to="/user/" style={style}>Denunciar</Link></li>
-                    <hr/>
+{/*                     <hr/>
                     <li><Link to="/user/denuncias" style={style}>Denúncias</Link></li>
-                    <hr/>
+ */}                    <hr/>
                     <li><Link to="/user/overview" style={style}>Overview</Link></li>
                     <hr/>
                     <li><a href="/" style={style}>Sair</a></li>

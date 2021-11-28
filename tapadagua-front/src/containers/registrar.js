@@ -1,7 +1,6 @@
 import {useState} from 'react'
 
 import './registro.css'
-import '../components/viaCEP'
 
 import api from '../services/api';
 
@@ -22,13 +21,16 @@ export default function Registrar() {
         }   
         const response = await api.post('/users',data)
 
-        console.log(data)
-
-        if(response.status === 200){
-            window.location.href="http://localhost:3000/"
-        }else{
-            alert('Erro no cadastro, confira suas informações')
+        if(nome !==''&&CPF!==''&&email!==''&&password!==''&&telefone!==''){
+            if(response.status === 200){
+                window.location.href="http://localhost:3000/"
+            }else{
+                alert('Erro no cadastro, confira suas informações')
+            }
+        }else {
+            alert('Ops, preencha todos os dados!')
         }
+
     }
 
     return(
@@ -140,6 +142,7 @@ export default function Registrar() {
                       </div> */}
                     <div class="botao">
                         <button class="btn btn-primary" onClick={handleSubmit}>Registrar</button>   
+                        <a href="."><button class="btn btn-danger">Voltar</button></a>
                     </div>
             </div>
         </div>

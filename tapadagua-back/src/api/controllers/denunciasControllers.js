@@ -2,19 +2,25 @@ const Denuncias = require('../models/denunciasModels.js');
 
 module.exports = {
     async index(req, res){
+        try{
         const denuncias = await Denuncias.findAll();
         console.log('Retorno denuncias: ' + denuncias);
-        return res.json(denuncias);
+        return res.json(denuncias);} catch(e) {
+            console.log(e)
+        }
     },
 
     async store(req, res){
-        const { rua, numero, bairro, cidade, cep, pontoReferencia } = req.body;
-        const denuncia = await Denuncias.create({rua, numero, bairro, cidade, cep, pontoReferencia});
+        try{
+        const { observacao, nro_protocolo } = req.body;
+        const denuncia = await Denuncias.create({observacao, nro_protocolo});
         return res.status(200).send({
             status: 1,
             message: "Denuncias cadastrado com sucesso !!!",
             denuncia
-        })
+        })} catch(e) {
+            console.log(e)
+        }
     },
 
     async update(req, res){

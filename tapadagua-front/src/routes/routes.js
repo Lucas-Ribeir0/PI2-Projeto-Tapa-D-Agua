@@ -5,6 +5,8 @@ import FormLog from "../containers/formLogin";
 import About from "../containers/about";
 import Registrar from "../containers/registrar";
 import Denunciar from "../containers/denunciar";
+import Overview from "../containers/overview";
+
 
 function Rotas(){
     return(
@@ -13,7 +15,7 @@ function Rotas(){
                 <Route path="/sobre" element={<About/>}/>
                 <Route path="/registrar" element={<Registrar/>}/>
                 <Route path="/user" element={<Denunciar/>}/>
-                {/* <Route path="/user/overview" element={<Overview/>}/> */}
+                <Route path="/user/overview" element={<Overview/>}/>
             </Routes>
     )
  }

@@ -1,65 +1,94 @@
+import { useState } from 'react';
 import './registro.css'
-import '../components/viaCEP'
 import UserPainel from './userpainel'
 
-const Denunciar = () => {
+import api from '../services/api';
+
+export default function Denunciar() {
+    const [CEP, setCEP] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [bairro, setBairro] = useState('');
+    const [referencia, setReferencia] = useState('');
+    const [obs, setObs] = useState('');
+
+    async function handleSubmit() { 
+        const dataEnd = {
+            cep:CEP,  
+            rua:endereco, 
+            cidade:cidade,
+            bairro:bairro,
+            ponto_referencia:referencia,
+        }   
+        
+
+        const dataDen = {
+            observacao:obs,
+            nro_protocolo:Math.floor(Math.random()*1000)
+        }
+
+        const response = await api.post('/enderecos',dataEnd)
+        const responseDen = await api.post('/denuncias',dataDen)
+            
+
+            if(CEP !==''&&cidade!==''&&endereco!==''&&bairro!==''){
+            if(response.status === 200 && responseDen.status === 200){
+                window.location.href="./user"
+            }else{
+                alert('Erro no cadastro, confira as informações')
+            }
+        }else {
+            alert('Ops, preencha todos os dados!')
+        }
+
+    }
+
     return(
         <>
         <div>
             <UserPainel/>
         </div>
-        <div className="formRegistro">
+        <div className="formDenuncia">
             <div className="topo">
-                <h4>Cadastro</h4>
+                <h4>Cadastro de Denúncia</h4>
             </div>
             <div className="insideRegistro">
-                <form>
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="CEP">CEP</label>
-                        <input type="text" class="form-control" id="CEP"/>
+                        <input type="text" class="form-control" id="CEP" name="cep" value={CEP} onChange={e => setCEP(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="UF">UF</label>
-                        <input type="text" class="form-control" id="UF"/>
+                        <input type="text" class="form-control" id="UF" name="uf"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Cidade">Cidade</label>
-                        <input type="text" class="form-control" id="Cidade"/>
+                        <input type="text" class="form-control" id="Cidade" name="cidade" value={cidade} onChange={e => setCidade(e.target.value)} />
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="Endereço">Endereço</label>
-                        <input type="text" class="form-control" id="Endereço"/>
+                        <input type="text" class="form-control" id="Endereço" name="endereco" value={endereco} onChange={e => setEndereco(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="Bairro">Bairro</label>
-                        <input type="text" class="form-control" id="Bairro"/>
+                        <input type="text" class="form-control" id="Bairro" name="bairro" value={bairro} onChange={e => setBairro(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="pontoRef">Ponto de Referência</label>
-                        <input type="text" class="form-control" id="pontoRef"/>
-                    </div>
-                </div>
-
-                <div class="input-group mb-3">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile03"/>
-                        <label class="custom-file-label" for="inputGroupFile03">Escolha o Arquivo</label>
+                        <input type="text" class="form-control" id="pontoRef" name="pontoRef" value={referencia} onChange={e => setReferencia(e.target.value)}/>
                     </div>
                 </div>
                 <div class="input-group">
-                    <textarea class="form-control" id="desc" placeholder="Descreva o que está acontencendo"></textarea>
+                    <textarea class="form-control" id="desc" placeholder="Descreva o que está acontencendo" rows="4" maxLength="80" value={obs} onChange={e => setObs(e.target.value)}/>
                 </div>
                 <div class="botao">
-                <a href="./"><button type="button" class="btn btn-primary">Registrar Denúncia</button></a>
+                    <button type="button" class="btn btn-primary" onClick={handleSubmit}>Registrar Denúncia</button>
                 </div>
-                </form>
             </div>
         </div>
         </>
     )
 }
-
-export default Denunciar

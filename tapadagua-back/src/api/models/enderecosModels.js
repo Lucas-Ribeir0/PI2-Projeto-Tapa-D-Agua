@@ -7,8 +7,8 @@ class Enderecos extends Model {
             numero: DataTypes.INTEGER,
             bairro: DataTypes.STRING,
             cidade: DataTypes.STRING,
-            cep: DataTypes.STRING,
-            pontoReferencia: DataTypes.STRING
+            cep: DataTypes.INTEGER,
+            ponto_referencia: DataTypes.STRING
         }, {
             sequelize,
             tableName: 'enderecos'

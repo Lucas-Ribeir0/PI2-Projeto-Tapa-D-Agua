@@ -23,6 +23,9 @@ Tendo no futuro, a oportunidade de anexar um vídeo ou imagem a sua denúncia.
 
 #
 
-O projeto foi construído sobre [React JS](https://reactjs.org/) — [Node JS](https://nodejs.dev/) — [Sequelize](https://sequelize.org/) — [Axios](https://axios-http.com/) — [Express JS](https://expressjs.com/)
+O projeto foi construído sobre [React JS](https://reactjs.org/) — [Node JS](https://nodejs.dev/) — [Sequelize](https://sequelize.org/) — [Axios](https://axios-http.com/) — [Express JS](https://expressjs.com/) — [MySQL](https://www.mysql.com/)
 <br>com o IDE da Microsoft — [Visual Studio Code](https://code.visualstudio.com/)
 
+#
+
+Breve Explicação em vídeo: [Youtube](https://youtu.be/yWvtQt88sEo)

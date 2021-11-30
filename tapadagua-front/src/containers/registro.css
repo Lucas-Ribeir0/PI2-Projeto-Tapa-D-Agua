@@ -8,6 +8,7 @@ div.formRegistro {
     margin: 80px 27%;
 }
 
+
 div.formDenuncia {
     margin: 80px 25%;
 }
@@ -35,4 +36,27 @@ div.formDenuncia {
 
 #desc {
     resize: none;
+}
+
+.insideOver > .denun {
+    margin-left: 27.5%;
+}
+
+#cod {
+    padding-left: 10px;
+}
+
+.insideOver #desc {
+    margin: 0 50px;
+}
+
+.insideOver #descR {
+    margin: 0 25px 0 20px;
+    resize: none;
+}
+
+#date.form-control {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 0
 }

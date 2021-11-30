@@ -33,7 +33,10 @@ export default function Denunciar() {
 
             if(CEP !==''&&cidade!==''&&endereco!==''&&bairro!==''){
             if(response.status === 200 && responseDen.status === 200){
-                window.location.href="./user"
+
+                alert(`Seu protocolo é: ${dataDen.nro_protocolo}`)
+
+                window.location.href="./"
             }else{
                 alert('Erro no cadastro, confira as informações')
             }

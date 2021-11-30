@@ -1,3 +1,4 @@
+const { Where } = require('sequelize/dist/lib/utils');
 const Denuncias = require('../models/denunciasModels.js');
 
 module.exports = {
@@ -5,6 +6,16 @@ module.exports = {
         try{
         const denuncias = await Denuncias.findAll();
         console.log('Retorno denuncias: ' + denuncias);
+        return res.json(denuncias);} catch(e) {
+            console.log(e)
+        }
+    },
+
+    async indexId(req, res){
+        try{
+        const {codigo} = req.params;
+        const denuncias = await Denuncias.findAll({where: {nro_protocolo:codigo}})
+        console.log('Retorno denuncia: ' + denuncias);
         return res.json(denuncias);} catch(e) {
             console.log(e)
         }

@@ -18,7 +18,7 @@ function UserPainel() {
 {/*                     <hr/>
                     <li><Link to="/user/denuncias" style={style}>Denúncias</Link></li>
  */}                    <hr/>
-                    <li><Link to="/user/overview" style={style}>Overview</Link></li>
+                    <li><Link to="/user/overview" style={style}>Acompanhar</Link></li>
                     <hr/>
                     <li><a href="/" style={style}>Sair</a></li>
                 </ul>

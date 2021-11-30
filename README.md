@@ -12,7 +12,7 @@ na <strong>Fatec Franca - Faculdade de Tecnologia de Franca Dr. Thomaz Novelino<
 Bruno Wesley Barbosa<br>
 Gustavo Costa Venuto<br>
 Jefferson Luiz Araujo da Silva<br>
-Lucas Antonio Ribeiro<br>
+[Lucas Antonio Ribeiro](https://www.behance.net/gallery/132322635/Projeto-Tapa-DAgua)<br>
 Matheus de Oliveira Rodovalho
 
 #

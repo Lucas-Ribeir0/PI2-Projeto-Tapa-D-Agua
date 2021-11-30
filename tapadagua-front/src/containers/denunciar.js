@@ -24,7 +24,7 @@ export default function Denunciar() {
 
         const dataDen = {
             observacao:obs,
-            nro_protocolo:Math.floor(Math.random()*1000)
+            nro_protocolo:Math.floor(Math.random()*10000)
         }
 
         const response = await api.post('/enderecos',dataEnd)
@@ -36,7 +36,7 @@ export default function Denunciar() {
 
                 alert(`Seu protocolo é: ${dataDen.nro_protocolo}`)
 
-                window.location.href="./"
+                window.location.href=""
             }else{
                 alert('Erro no cadastro, confira as informações')
             }
@@ -59,29 +59,29 @@ export default function Denunciar() {
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="CEP">CEP</label>
-                        <input type="text" class="form-control" id="CEP" name="cep" value={CEP} onChange={e => setCEP(e.target.value)}/>
+                        <input autoComplete="off" type="text" class="form-control" id="CEP" name="cep" value={CEP} onChange={e => setCEP(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="UF">UF</label>
-                        <input type="text" class="form-control" id="UF" name="uf"/>
+                        <input autoComplete="off" type="text" class="form-control" id="UF" name="uf"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Cidade">Cidade</label>
-                        <input type="text" class="form-control" id="Cidade" name="cidade" value={cidade} onChange={e => setCidade(e.target.value)} />
+                        <input autoComplete="off" type="text" class="form-control" id="Cidade" name="cidade" value={cidade} onChange={e => setCidade(e.target.value)} />
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="Endereço">Endereço</label>
-                        <input type="text" class="form-control" id="Endereço" name="endereco" value={endereco} onChange={e => setEndereco(e.target.value)}/>
+                        <input autoComplete="off" type="text" class="form-control" id="Endereço" name="endereco" value={endereco} onChange={e => setEndereco(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="Bairro">Bairro</label>
-                        <input type="text" class="form-control" id="Bairro" name="bairro" value={bairro} onChange={e => setBairro(e.target.value)}/>
+                        <input autoComplete="off" type="text" class="form-control" id="Bairro" name="bairro" value={bairro} onChange={e => setBairro(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="pontoRef">Ponto de Referência</label>
-                        <input type="text" class="form-control" id="pontoRef" name="pontoRef" value={referencia} onChange={e => setReferencia(e.target.value)}/>
+                        <input autoComplete="off" type="text" class="form-control" id="pontoRef" name="pontoRef" value={referencia} onChange={e => setReferencia(e.target.value)}/>
                     </div>
                 </div>
                 <div class="input-group">

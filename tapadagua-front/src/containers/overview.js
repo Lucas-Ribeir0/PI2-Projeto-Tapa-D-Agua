@@ -76,7 +76,7 @@ export default function Overview() {
                         <input 
                             required
                             autoComplete
-                            readOnly
+                            disabled
                             class="form-control" 
                             type="text"  
                             id="status"
@@ -87,7 +87,7 @@ export default function Overview() {
                         <input 
                             required
                             autoComplete
-                            readOnly
+                            disabled
                             class="form-control" 
                             type="text"  
                             id="date"

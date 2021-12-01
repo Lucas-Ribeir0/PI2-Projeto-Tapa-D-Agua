@@ -28,4 +28,4 @@ O projeto foi construído sobre [React JS](https://reactjs.org/) — [Node JS](h
 
 #
 
-Breve Explicação em vídeo: [Youtube](https://youtu.be/yWvtQt88sEo)
+Breve Explicação em vídeo: [Youtube](https://youtu.be/VCuNGtekxXc)

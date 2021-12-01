@@ -10,7 +10,7 @@ na <strong>Fatec Franca - Faculdade de Tecnologia de Franca Dr. Thomaz Novelino<
 
 <strong>O projeto foi idealizado por:</strong><br>
 Bruno Wesley Barbosa<br>
-Gustavo Costa Venuto<br>
+[Gustavo Costa Venuto](https://github.com/gustavovenuto/api-tapadagua)<br>
 Jefferson Luiz Araujo da Silva<br>
 [Lucas Antonio Ribeiro](https://www.behance.net/gallery/132322635/Projeto-Tapa-DAgua)<br>
 Matheus de Oliveira Rodovalho

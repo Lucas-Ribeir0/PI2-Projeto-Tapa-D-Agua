@@ -9,17 +9,13 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
-      nroProtocolo: {
+      nro_protocolo: {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      statusDen: {
+      status_den: {
         allowNull: false,
         type: Sequelize.STRING(20),
-      },
-      dtDenuncia: {
-        allowNull: false,
-        type: Sequelize.DATE,
       },
       observacao: {
         allowNull: false,

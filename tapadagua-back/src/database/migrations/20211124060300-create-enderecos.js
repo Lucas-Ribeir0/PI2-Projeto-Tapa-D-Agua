@@ -29,7 +29,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(20),
       },
-      pontoReferencia: {
+      ponto_referencia: {
         allowNull: false,
         type: Sequelize.STRING(80),
       },

@@ -3,20 +3,19 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return Promise.all([
-      queryInterface.changeColumn('denuncias', 'statusDen', {
+      queryInterface.changeColumn('denuncias', 'status_den', {
         type: Sequelize.STRING(20),
         allowNull: false,
         defaultValue: 'Em Analise'
       }),
-      queryInterface.changeColumn('denuncias', 'nroProtocolo', {
+      queryInterface.changeColumn('denuncias', 'nro_protocolo', {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue: Math.floor(Math.random() * (1000 - 100))
       })
     ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    return Promise.all([queryInterface.changeColumn('denuncias', 'statusDen'), queryInterface.changeColumn('denuncias', 'NroProtocolo')])
+    return Promise.all([queryInterface.changeColumn('denuncias', 'status_den'), queryInterface.changeColumn('denuncias', 'nro_protocolo')])
   },
 };

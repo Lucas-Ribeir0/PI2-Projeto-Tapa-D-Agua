@@ -6,6 +6,7 @@ import api from '../services/api';
 
 export default function Denunciar() {
     const [CEP, setCEP] = useState('');
+    const [UF, setUF] = useState('');
     const [cidade, setCidade] = useState('');
     const [endereco, setEndereco] = useState('');
     const [bairro, setBairro] = useState('');
@@ -21,7 +22,6 @@ export default function Denunciar() {
             ponto_referencia:referencia,
         }   
         
-
         const dataDen = {
             observacao:obs,
             nro_protocolo:Math.floor(Math.random()*10000)
@@ -45,6 +45,18 @@ export default function Denunciar() {
         }
 
     }
+    function checkCEP() {
+        fetch(`https://viacep.com.br/ws/${CEP}/json/`)
+        .then(res => res.json()).then(data => {
+            console.log(data)
+
+            setEndereco(data.logradouro)
+            setBairro(data.bairro)
+            setCidade(data.localidade)
+            setUF(data.uf)
+        });
+    }
+
 
     return(
         <>
@@ -59,11 +71,11 @@ export default function Denunciar() {
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="CEP">CEP</label>
-                        <input autoComplete="off" type="text" class="form-control" id="CEP" name="cep" value={CEP} onChange={e => setCEP(e.target.value)}/>
+                        <input autoComplete="off" type="text" class="form-control" id="CEP" name="cep" value={CEP} onChange={e => setCEP(e.target.value)} onBlur={checkCEP}/>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="UF">UF</label>
-                        <input autoComplete="off" type="text" class="form-control" id="UF" name="uf"/>
+                        <input autoComplete="off" type="text" class="form-control" id="UF" name="uf" value={UF} onChange={e => setUF(e.target.value)}/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Cidade">Cidade</label>

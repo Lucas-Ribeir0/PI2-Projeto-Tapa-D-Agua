@@ -13,14 +13,11 @@ export default function Overview() {
     const [data, setData] = useState('');
     const [status, setStatus] = useState('');
 
-
     async function handleSubmit() { 
-
         const codig = cod
            
         const response = await axios.get(
             `http://localhost:3308/denuncias/${codig}`, {params: {codigo:codig}})
-
         console.log(response.data)
 
         const responseD = Array.from(response.data)
@@ -29,9 +26,8 @@ export default function Overview() {
             setObs(obj.observacao)
             setData(obj.createdAt)
             setStatus(obj.status_den)
-        }
-            
-        }
+        }        
+    }
 
 /*         if(cod !==''){
             if(response.status === 200){
